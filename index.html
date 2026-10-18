@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Find remote jobs with US-friendly locations, flexible work options, and direct application links. Explore remote careers in technology, marketing, customer support, operations, and more.">
+<meta name="theme-color" content="#102c26">
+<title>RemoteCareerHub — Find Your Next Remote Job</title>
+<style>
+:root{--ink:#14251f;--muted:#65746d;--green:#146b50;--mint:#dff5e9;--cream:#f7f8f3;--line:#e3e9e3;--white:#fff;--orange:#ffb86b;--shadow:0 12px 35px rgba(16,44,38,.08)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:var(--cream);line-height:1.5}a{color:inherit}.wrap{width:min(1120px,calc(100% - 36px));margin:auto}
+header{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5}.nav{height:74px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{display:flex;align-items:center;gap:10px;font-size:20px;font-weight:850;text-decoration:none;letter-spacing:-.6px}.logo{width:37px;height:37px;border-radius:12px;background:var(--green);color:#fff;display:grid;place-items:center;font-weight:900}.brand span:last-child{color:var(--green)}.navlinks{display:flex;align-items:center;gap:24px;font-size:14px;color:#53635b}.navlinks a{text-decoration:none}.navlinks a:hover{color:var(--green)}.post-link{background:var(--green);color:white!important;padding:11px 16px;border-radius:10px;font-weight:700}
+.hero{padding:70px 0 56px;background:radial-gradient(ellipse at 80% 10%,#d8f3e4 0,transparent 34%),linear-gradient(135deg,#f7f8f3,#edf7ef);overflow:hidden}.hero-grid{display:grid;grid-template-columns:1.3fr .7fr;align-items:center;gap:38px}.eyebrow{display:inline-flex;align-items:center;gap:8px;border:1px solid #cce7d7;background:#ffffffb8;color:var(--green);font-size:12px;font-weight:800;letter-spacing:1px;text-transform:uppercase;border-radius:30px;padding:8px 12px}.dot{width:7px;height:7px;background:#28a16c;border-radius:50%}h1{font-size:clamp(38px,5vw,64px);line-height:1.04;letter-spacing:-2.7px;margin:20px 0 18px;max-width:680px}h1 em{font-style:normal;color:var(--green)}.hero p{font-size:17px;color:var(--muted);max-width:570px;margin:0 0 25px}.hero-art{min-height:260px;position:relative;display:grid;place-items:center}.art-card{background:#fff;border:1px solid #dfe9e0;border-radius:22px;padding:22px;width:min(100%,320px);box-shadow:var(--shadow);transform:rotate(3deg)}.art-top{display:flex;gap:12px;align-items:center;border-bottom:1px solid var(--line);padding-bottom:17px}.avatar{width:44px;height:44px;border-radius:14px;background:#fce5c9;display:grid;place-items:center;font-size:22px}.art-title{font-weight:800}.art-sub{font-size:12px;color:var(--muted)}.mini-job{display:flex;gap:10px;align-items:center;margin-top:16px}.mini-icon{width:34px;height:34px;background:#e2f5e9;border-radius:10px;display:grid;place-items:center}.mini-lines{flex:1}.line{height:7px;background:#e9eee9;border-radius:9px;margin:5px 0}.line.short{width:60%}.float-chip{position:absolute;background:#fff;padding:11px 15px;border:1px solid var(--line);border-radius:13px;box-shadow:var(--shadow);font-size:13px;font-weight:750}.chip-one{top:25px;left:0;transform:rotate(-5deg)}.chip-two{right:0;bottom:22px;transform:rotate(4deg)}
+.search-panel{background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);padding:10px;display:flex;gap:8px;max-width:760px}.search-panel input{min-width:0;flex:1;border:0;outline:0;padding:13px 12px;font:inherit}.btn{border:0;background:var(--green);color:white;border-radius:11px;padding:13px 20px;font:inherit;font-weight:800;cursor:pointer}.btn:hover{background:#0e543f}.btn:disabled{opacity:.5;cursor:not-allowed}.stats{display:flex;gap:24px;flex-wrap:wrap;margin-top:23px;color:var(--muted);font-size:13px}.stats strong{color:var(--ink)}
+main{padding:48px 0 70px}.section-head{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:24px}.section-head h2{font-size:30px;letter-spacing:-1px;margin:0}.section-head p{color:var(--muted);margin:6px 0 0}.result-count{font-size:13px;color:var(--muted);white-space:nowrap}.filters{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:12px;margin-bottom:20px}.field{width:100%;border:1px solid var(--line);border-radius:11px;background:#fff;padding:12px 13px;font:inherit;color:var(--ink);outline-color:#8fc9a7}.category-row{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 24px}.pill{border:1px solid var(--line);background:#fff;border-radius:99px;padding:8px 13px;font-size:13px;color:#52635a;cursor:pointer}.pill.active,.pill:hover{background:var(--mint);border-color:#b8dfc7;color:var(--green);font-weight:750}.job-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px}.job{background:#fff;border:1px solid var(--line);border-radius:16px;padding:20px;transition:transform .18s,box-shadow .18s}.job:hover{transform:translateY(-2px);box-shadow:var(--shadow)}.job-top{display:flex;gap:12px;align-items:start}.company-logo{width:46px;height:46px;flex:0 0 46px;border:1px solid var(--line);border-radius:13px;display:grid;place-items:center;overflow:hidden;background:#f8faf8;color:var(--green);font-weight:900}.company-logo img{width:100%;height:100%;object-fit:contain}.job-title{font-size:17px;font-weight:850;line-height:1.3;margin:0 0 5px;letter-spacing:-.25px}.company{font-size:13px;color:var(--muted)}.save{margin-left:auto;border:1px solid var(--line);background:white;border-radius:10px;padding:7px 9px;cursor:pointer;font-size:16px}.job-desc{font-size:13px;color:#58675f;margin:15px 0;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}.tags{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:17px}.tag{background:#f2f5f1;border-radius:7px;padding:5px 8px;color:#536159;font-size:11px;font-weight:700}.job-bottom{display:flex;justify-content:space-between;align-items:center;gap:12px;border-top:1px solid #edf0ed;padding-top:14px}.salary{font-size:12px;font-weight:800;color:var(--green)}.posted{font-size:11px;color:#7a8780}.apply{font-size:13px;font-weight:800;color:var(--green);text-decoration:none;white-space:nowrap}.apply:hover{text-decoration:underline}.status{padding:30px;text-align:center;color:var(--muted);background:white;border:1px dashed #cbd8ce;border-radius:15px;grid-column:1/-1}.status strong{display:block;color:var(--ink);font-size:17px;margin-bottom:5px}.notice{font-size:12px;color:var(--muted);margin-top:20px}.notice a{color:var(--green)}.load-row{text-align:center;margin-top:24px}.secondary{background:white;color:var(--green);border:1px solid #c9dfd0}.secondary:hover{background:var(--mint)}
+.value-strip{background:#12372d;color:#fff;padding:36px 0}.value-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}.value-item{display:flex;gap:13px;align-items:start}.value-icon{font-size:22px}.value-item strong{display:block;margin-bottom:4px}.value-item span{font-size:13px;color:#c6d9cf}
+.blog{padding:54px 0}.blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.blog-card{background:#fff;border:1px solid var(--line);border-radius:15px;padding:20px}.blog-card small{color:var(--green);font-weight:800;text-transform:uppercase;letter-spacing:.8px}.blog-card h3{font-size:18px;line-height:1.3;margin:10px 0}.blog-card p{font-size:13px;color:var(--muted);margin:0}
+footer{background:#fff;border-top:1px solid var(--line);padding:30px 0}.footer-row{display:flex;justify-content:space-between;gap:24px;align-items:start;flex-wrap:wrap}.footer-links{display:flex;gap:16px;flex-wrap:wrap;font-size:12px;color:var(--muted)}.footer-links a{color:inherit}.copyright{font-size:12px;color:var(--muted);margin-top:16px}.fineprint{font-size:11px;color:#758179;max-width:760px;margin-top:12px}
+@media(max-width:760px){.nav{height:65px}.navlinks a:not(.post-link){display:none}.hero{padding:48px 0 38px}.hero-grid{grid-template-columns:1fr}.hero-art{display:none}h1{letter-spacing:-1.7px}.search-panel{flex-wrap:wrap}.search-panel input{flex-basis:100%}.search-panel .btn{width:100%}.filters{grid-template-columns:1fr}.job-list{grid-template-columns:1fr}.section-head{align-items:start;flex-direction:column}.value-grid,.blog-grid{grid-template-columns:1fr}.value-grid{gap:20px}.wrap{width:min(100% - 28px,1120px)}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav">
+  <a class="brand" href="#" aria-label="RemoteCareerHub home"><span class="logo">R</span><span>RemoteCareerHub</span></a>
+  <nav class="navlinks"><a href="#jobs">Find Jobs</a><a href="#categories">Categories</a><a href="#career-guides">Career Guides</a><a class="post-link" href="#jobs">Explore Jobs ↗</a></nav>
+</div></header>
+<section class="hero"><div class="wrap hero-grid">
+  <div>
+    <span class="eyebrow"><span class="dot"></span> Your next chapter starts here</span>
+    <h1>Work from anywhere.<br><em>Grow everywhere.</em></h1>
+    <p>Discover remote opportunities from companies around the world, with filters to help you find roles that fit your skills and work style.</p>
+    <form class="search-panel" id="heroSearch"><input id="heroQuery" type="search" placeholder="Job title, skill, or company…" aria-label="Search jobs"><button class="btn" type="submit">Search jobs →</button></form>
+    <div class="stats"><span>✓ <strong>Remote opportunities</strong></span><span>✓ <strong>Direct application links</strong></span><span>✓ <strong>Updated job feed</strong></span></div>
+  </div>
+  <div class="hero-art" aria-hidden="true"><div class="float-chip chip-one">🌎 Work from anywhere</div><div class="art-card"><div class="art-top"><div class="avatar">💻</div><div><div class="art-title">Your next role</div><div class="art-sub">Find work that fits your life</div></div></div><div class="mini-job"><div class="mini-icon">✦</div><div class="mini-lines"><div class="line"></div><div class="line short"></div></div></div><div class="mini-job"><div class="mini-icon">↗</div><div class="mini-lines"><div class="line"></div><div class="line short"></div></div></div><div class="mini-job"><div class="mini-icon">◎</div><div class="mini-lines"><div class="line"></div><div class="line short"></div></div></div></div><div class="float-chip chip-two">✨ Find your fit</div></div>
+</div></section>
+<main id="jobs"><div class="wrap">
+  <div class="section-head"><div><h2>Explore remote jobs</h2><p>Search current listings and apply through the original posting.</p></div><div class="result-count" id="resultCount">Loading jobs…</div></div>
+  <div class="filters">
+    <input class="field" id="query" type="search" placeholder="Search job title, skills, company…" aria-label="Search listings">
+    <select class="field" id="typeFilter" aria-label="Employment type"><option value="">All employment types</option><option>Full Time</option><option>Part Time</option><option>Contractor</option><option>Temporary</option><option>Intern</option></select>
+    <select class="field" id="sortFilter" aria-label="Sort jobs"><option value="recent">Most recent</option><option value="salaryDesc">Highest salary</option><option value="salaryAsc">Lowest salary</option></select>
+  </div>
+  <div class="category-row" id="categories">
+    <button class="pill active" data-category="">All roles</button><button class="pill" data-category="customer support">Customer support</button><button class="pill" data-category="marketing">Marketing</button><button class="pill" data-category="design">Design</button><button class="pill" data-category="sales">Sales</button><button class="pill" data-category="software">Software & IT</button><button class="pill" data-category="operations">Operations</button><button class="pill" data-category="data">Data</button>
+  </div>
+  <div class="job-list" id="jobList"><div class="status"><strong>Finding remote jobs…</strong>Please wait while the latest listings load.</div></div>
+  <div class="load-row"><button class="btn secondary" id="loadMore" hidden>Load more jobs</button></div>
+  <p class="notice">Job data is provided by <a href="https://himalayas.app" target="_blank" rel="noopener noreferrer">Himalayas</a>. Listings and availability may change. Always verify details on the original application page.</p>
+</div></main>
+<section class="value-strip"><div class="wrap value-grid">
+  <div class="value-item"><div class="value-icon">🎯</div><div><strong>Search with purpose</strong><span>Filter opportunities by role, skills, and employment type.</span></div></div>
+  <div class="value-item"><div class="value-icon">🔗</div><div><strong>Apply at the source</strong><span>Follow the original job link to review requirements and apply.</span></div></div>
+  <div class="value-item"><div class="value-icon">🌱</div><div><strong>Build your next step</strong><span>Use our career guide ideas to prepare for remote work.</span></div></div>
+</div></section>
+<section class="blog" id="career-guides"><div class="wrap"><div class="section-head"><div><h2>Remote career starter guides</h2><p>Useful topics to help you prepare for your next application.</p></div></div>
+<div class="blog-grid">
+  <article class="blog-card"><small>Getting started</small><h3>How to prepare for your first remote job</h3><p>Build a focused resume, highlight independent work, and prepare examples of clear communication.</p></article>
+  <article class="blog-card"><small>Applications</small><h3>Make your remote-work resume stand out</h3><p>Show measurable results, relevant tools, and evidence that you can work effectively across teams.</p></article>
+  <article class="blog-card"><small>Safety</small><h3>How to spot remote job scams</h3><p>Be cautious of upfront fees, requests for sensitive information, and interviews conducted only through suspicious channels.</p></article>
+</div></div></section>
+<footer><div class="wrap"><div class="footer-row"><a class="brand" href="#"><span class="logo">R</span><span>RemoteCareerHub</span></a><div class="footer-links"><a href="#about" onclick="alert('Add your About page before launch.')">About</a><a href="mailto:hello@example.com">Contact</a><a href="#privacy" onclick="alert('Add a complete Privacy Policy before launch.')">Privacy Policy</a><a href="#terms" onclick="alert('Add Terms before launch.')">Terms</a></div></div><div class="copyright">© <span id="year"></span> RemoteCareerHub. Check every vacancy on the original employer or listing page.</div><p class="fineprint">RemoteCareerHub is an independent job discovery project and is not affiliated with the employers or job-data provider shown. Job details may change. Do not pay a recruiter to secure a job. Replace the placeholder contact email and add complete policy pages before public promotion or advertising applications.</p></div></footer>
+<script>
+const API = "https://himalayas.app/jobs/api/search";
+const PAGE_SIZE = 20;
+let allJobs = [];
+let apiPage = 1;
+let apiHasMore = true;
+let selectedCategory = "";
+let loading = false;
+const $ = id => document.getElementById(id);
+$("year").textContent = new Date().getFullYear();
+
+function safeText(value, fallback="") {
+  return typeof value === "string" && value.trim() ? value.trim() : fallback;
+}
+function formatSalary(job) {
+  const min = Number(job.minSalary), max = Number(job.maxSalary);
+  const currency = safeText(job.currency, "USD");
+  const period = safeText(job.salaryPeriod, "annual");
+  if (min && max) return `${currency} ${min.toLocaleString()}–${max.toLocaleString()} / ${period}`;
+  if (min) return `From ${currency} ${min.toLocaleString()} / ${period}`;
+  if (max) return `Up to ${currency} ${max.toLocaleString()} / ${period}`;
+  return "Salary not listed";
+}
+function dateLabel(job) {
+  const raw = job.pubDate || job.publishedAt || job.createdAt;
+  if (!raw) return "Check posting";
+  let date = typeof raw === "number" ? new Date(raw < 1e12 ? raw * 1000 : raw) : new Date(raw);
+  if (Number.isNaN(date.getTime())) return "Check posting";
+  const days = Math.max(0, Math.floor((Date.now()-date.getTime())/86400000));
+  if (days === 0) return "Posted today";
+  if (days === 1) return "Posted yesterday";
+  if (days < 30) return `Posted ${days} days ago`;
+  return date.toLocaleDateString(undefined,{month:"short",day:"numeric",year:"numeric"});
+}
+function typeLabel(job) {
+  const type = job.employmentType || job.employment_type;
+  if (Array.isArray(type)) return type.join(", ");
+  return safeText(type, "Remote");
+}
+function getDescription(job) {
+  const raw = job.excerpt || job.description || job.shortDescription || "";
+  const div = document.createElement("div");
+  div.textContent = raw;
+  return div.textContent.replace(/\s+/g," ").trim();
+}
+function categoryText(job) {
+  const cats = job.categories || job.category || [];
+  return Array.isArray(cats) ? cats.join(" ").toLowerCase() : String(cats).toLowerCase();
+}
+function normalizeLocation(job) {
+  const loc = job.locationRestrictions || job.locations || job.location || [];
+  if (Array.isArray(loc)) return loc.join(", ");
+  return typeof loc === "string" ? loc : "";
+}
+function isUSOrWorldwide(job) {
+  const locations = normalizeLocation(job).toLowerCase();
+  const restrictions = job.locationRestrictions;
+  if (!locations || locations.includes("worldwide") || locations.includes("anywhere")) return true;
+  if (Array.isArray(restrictions)) return restrictions.some(x => /united states|^us$|^usa$|^u\.s\./i.test(x));
+  return /united states|usa|united states only|\bus\b/i.test(locations);
+}
+function escapeHTML(str) {
+  return String(str ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+}
+function companyInitials(name) {
+  return safeText(name,"R").split(/\s+/).slice(0,2).map(s=>s[0]).join("").toUpperCase();
+}
+function renderJobs() {
+  const query = $("query").value.trim().toLowerCase();
+  const type = $("typeFilter").value.toLowerCase();
+  const sort = $("sortFilter").value;
+  let jobs = allJobs.filter(job => {
+    const searchable = [job.title,job.companyName,job.excerpt,job.description,categoryText(job),normalizeLocation(job)].join(" ").toLowerCase();
+    const jobType = typeLabel(job).toLowerCase();
+    return (!query || searchable.includes(query)) &&
+      (!type || jobType.includes(type)) &&
+      (!selectedCategory || searchable.includes(selectedCategory));
+  });
+  if (sort === "salaryDesc") jobs.sort((a,b)=>(Number(b.maxSalary)||0)-(Number(a.maxSalary)||0));
+  if (sort === "salaryAsc") jobs.sort((a,b)=>(Number(a.minSalary)||Infinity)-(Number(b.minSalary)||Infinity));
+  $("resultCount").textContent = `${jobs.length} ${jobs.length===1?"job":"jobs"} shown`;
+  if (!jobs.length) {
+    $("jobList").innerHTML = `<div class="status"><strong>No matching jobs found</strong>Try another keyword or filter. New listings may be available from the live feed.</div>`;
+    return;
+  }
+  $("jobList").innerHTML = jobs.map(job => {
+    const title = safeText(job.title,"Remote opportunity");
+    const company = safeText(job.companyName,"Company not listed");
+    const url = safeText(job.applicationLink || job.url || job.guid,"https://himalayas.app");
+    const logo = safeText(job.companyLogo);
+    const desc = getDescription(job);
+    const location = normalizeLocation(job);
+    const tags = [typeLabel(job), location || "Remote", safeText(job.seniority)].filter(Boolean).slice(0,3);
+    return `<article class="job">
+      <div class="job-top"><div class="company-logo">${logo ? `<img src="${escapeHTML(logo)}" alt="" loading="lazy" onerror="this.remove()">` : escapeHTML(companyInitials(company))}</div>
+      <div style="min-width:0"><h3 class="job-title">${escapeHTML(title)}</h3><div class="company">${escapeHTML(company)}</div></div>
+      <button class="save" title="Copy job link" aria-label="Copy job link" data-copy="${escapeHTML(url)}">↗</button></div>
+      <p class="job-desc">${escapeHTML(desc || "Open the original listing to review responsibilities, qualifications, and application instructions.")}</p>
+      <div class="tags">${tags.map(t=>`<span class="tag">${escapeHTML(t)}</span>`).join("")}</div>
+      <div class="job-bottom"><div><div class="salary">${escapeHTML(formatSalary(job))}</div><div class="posted">${escapeHTML(dateLabel(job))}</div></div><a class="apply" href="${escapeHTML(url)}" target="_blank" rel="noopener noreferrer">View & Apply ↗</a></div>
+    </article>`;
+  }).join("");
+  document.querySelectorAll("[data-copy]").forEach(btn => btn.addEventListener("click", async () => {
+    try { await navigator.clipboard.writeText(btn.dataset.copy); btn.textContent="✓"; setTimeout(()=>btn.textContent="↗",1200); }
+    catch { window.open(btn.dataset.copy,"_blank","noopener"); }
+  }));
+}
+async function loadJobs({append=false, query=""}={}) {
+  if (loading) return;
+  loading = true;
+  if (!append) {
+    apiPage = 1; apiHasMore = true; allJobs = [];
+    $("jobList").innerHTML = `<div class="status"><strong>Loading live listings…</strong>Fetching remote jobs from the data provider.</div>`;
+  }
+  $("loadMore").disabled = true;
+  $("loadMore").textContent = "Loading…";
+  try {
+    const params = new URLSearchParams({country:"US",sort:"recent",page:String(apiPage)});
+    if (query.trim()) params.set("q",query.trim());
+    const response = await fetch(`${API}?${params.toString()}`, {headers:{"Accept":"application/json"}});
+    if (!response.ok) throw new Error(`Job feed returned ${response.status}`);
+    const data = await response.json();
+    const incoming = Array.isArray(data.jobs) ? data.jobs : [];
+    const seen = new Set(allJobs.map(j=>j.guid || j.applicationLink || `${j.title}-${j.companyName}`));
+    for (const job of incoming) {
+      const key = job.guid || job.applicationLink || `${job.title}-${job.companyName}`;
+      if (!seen.has(key)) { allJobs.push(job); seen.add(key); }
+    }
+    apiHasMore = incoming.length >= PAGE_SIZE;
+    apiPage += 1;
+    renderJobs();
+    $("loadMore").hidden = !apiHasMore;
+  } catch (error) {
+    if (!allJobs.length) {
+      $("jobList").innerHTML = `<div class="status"><strong>Live jobs could not load right now</strong>This may be a temporary network or browser-access issue. Try again, or open the <a href="https://himalayas.app/jobs" target="_blank" rel="noopener noreferrer">Himalayas job board</a> directly.<br><br><button class="btn" onclick="loadJobs()">Try again</button></div>`;
+      $("resultCount").textContent = "Feed unavailable";
+    } else {
+      $("resultCount").textContent = "Showing loaded listings";
+    }
+    console.error(error);
+  } finally {
+    loading = false;
+    $("loadMore").disabled = false;
+    $("loadMore").textContent = "Load more jobs";
+  }
+}
+$("heroSearch").addEventListener("submit", e => {
+  e.preventDefault();
+  $("query").value = $("heroQuery").value;
+  $("jobs").scrollIntoView({behavior:"smooth"});
+  renderJobs();
+});
+$("query").addEventListener("input", renderJobs);
+$("typeFilter").addEventListener("change", renderJobs);
+$("sortFilter").addEventListener("change", renderJobs);
+document.querySelectorAll("[data-category]").forEach(btn => btn.addEventListener("click",()=>{
+  document.querySelectorAll("[data-category]").forEach(b=>b.classList.remove("active"));
+  btn.classList.add("active"); selectedCategory = btn.dataset.category; renderJobs();
+}));
+$("loadMore").addEventListener("click",()=>loadJobs({append:true,query:""}));
+loadJobs();
+</script>
+</body>
+</html>
